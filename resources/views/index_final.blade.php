@@ -57,8 +57,8 @@
 				<span class="dance-med">
 		            Save the Date
 		        </span>
-		        <div class="date py-2">
-		        	<i class="bi bi-calendar-heart fs-40"></i>
+		        <div class="py-2">
+		        	<i class="date bi bi-calendar-heart fs-40"></i>
 		        	<br class="my-3">
 		        	<u>Saturday, November 25, 2023</u>
 		        	<br class="my-3">
@@ -67,10 +67,10 @@
 		        <span class="dance-med">
 		            Venue
 		        </span>
-		        <div class="location py-2">
-		        	<i class="bi bi-map-fill fs-40"></i>
+		        <div class="py-2">
+		        	<i class="location bi bi-map-fill fs-40"></i>
 		        	<br class="my-3">
-		        	<u>Chaw Twin Gone, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
+		        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
 		        	<br class="my-3">
 		        </div>
 			</div>
@@ -85,15 +85,15 @@
 		        <form class="text-start" action="/rsvp" method="POST">
 		        	<div class="mb-3">
 		        		<label for="name">Name</label>
-		        		<input type="text" name="name" class="form-control border-none" id="name">
+		        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
 		        	</div>
 		        	<div class="mb-3">
 		        		<label for="phone">Phone</label>
-		        		<input type="text" name="phone" class="form-control border-none" id="phone">
+		        		<input type="text" name="phone" class="form-control border-none bg-transparent" id="phone">
 		        	</div>
 		        	<div class="mb-3">
 		        		<label for="attendance">Attendance Confirmation</label>
-			        	<select class="form-select mt-2 text-dark" id="attendance" name="attendance">
+			        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="attendance">
 			        		<option value="0">Accept with pleasure! &#128513;</option>
 			        		<option value="1">Decline with regret. &#128532;</option>
 			        	</select>
@@ -101,25 +101,25 @@
 		        	<div class="mb-3">
 		        		<label for="extra">Number of Guests</label>
 			        	<div class="form-check mt-2">
-							<input class="form-check-input ac" type="radio" name="extra" id="extra1">
+							<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1">
 							<label class="form-check-label" for="extra1">
 								Only me.
 							</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input ac" type="radio" name="extra" id="extra2">
+							<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra2">
 							<label class="form-check-label" for="extra2">
 								+1
 							</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input ac" type="radio" name="extra" id="extra3">
+							<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra3">
 							<label class="form-check-label" for="extra3">
 								+2
 							</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input bg-pink" type="radio" name="extra" id="extra4">
+							<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra4">
 							<label class="form-check-label" for="extra4">
 								+3
 							</label>

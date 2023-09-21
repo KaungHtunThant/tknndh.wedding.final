@@ -508,7 +508,7 @@ img {
 }
 
 .form-check-input:checked{
-	background-color: #db538a;
+	background-color: #db538a!important;
 	border-color: #db538a;
 }
 
