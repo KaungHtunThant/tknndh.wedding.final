@@ -352,6 +352,9 @@
 
 body {
 	font-family: Arial, Helvetica, Sans-serif;
+}
+
+.bg-3{
 	background-image: url('/assets/img/bg-3.jpg');
 	background-position: right;
 	background-repeat: no-repeat;
@@ -366,7 +369,7 @@ img {
 
 @media (max-width:900px) {
 	img {
-		max-width: 30%;
+		max-width: 40%;
 	}
 }
 
