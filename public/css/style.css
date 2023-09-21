@@ -588,3 +588,8 @@ select option{
 	background: transparent;
 	backdrop-filter: blur(5px);
 }
+
+.border-pink{
+	border-color: #db538a;
+}
+

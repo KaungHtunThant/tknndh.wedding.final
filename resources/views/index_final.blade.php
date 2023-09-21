@@ -69,14 +69,16 @@
 				        	<br class="my-3">
 				        </div>
 				        <hr class="mb-4">
-				        <span class="dance-med">
-				            Venue
-				        </span>
-				        <div class="py-2">
-				        	<i class="location bi bi-map-fill fs-40"></i>
-				        	<br class="my-3">
-				        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
-				        	<br class="my-3">
+				        <div id="location">
+				        	<span class="dance-med">
+					            Venue
+					        </span>
+					        <div class="py-2">
+					        	<i class="location bi bi-map-fill fs-40"></i>
+					        	<br class="my-3">
+					        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
+					        	<br class="my-3">
+					        </div>
 				        </div>
 					</div>
 				</div>
@@ -99,45 +101,45 @@
 				        	<div class="mb-3">
 				        		<label for="attendance">Attendance Confirmation</label>
 					        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="attendance">
-					        		<option value="0">Accept with pleasure! &#128513;</option>
-					        		<option value="1">Decline with regret. &#128532;</option>
+					        		<option value="0">Accept with pleasure!  &#128513;</option>
+					        		<option value="1">Decline with regret.  &#128532;</option>
 					        	</select>
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="extra">Number of Guests</label>
 					        	<div class="form-check mt-2">
-									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1" value="1">
 									<label class="form-check-label" for="extra1">
 										Only me.
 									</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra2">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra2" value="2">
 									<label class="form-check-label" for="extra2">
 										+1
 									</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra3">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra3" value="3">
 									<label class="form-check-label" for="extra3">
 										+2
 									</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra4">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra4" value="4">
 									<label class="form-check-label" for="extra4">
 										+3
 									</label>
 								</div>
 				        	</div>
 				        	<div class="mb-3 text-center">
-								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark btn-round px-4 py-2">
+								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
 							</div>
 				        </form>
 					</div>
 				</div>
 			</div>
-			<div class="container my-5 px-4">
+			<div class="container my-5 px-4" id="tar_location">
 				<div class="row">
 					<div class="col-12 rounded p-3 shadow">
 						<p class="dance-med">
