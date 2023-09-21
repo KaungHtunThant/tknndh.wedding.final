@@ -46,110 +46,115 @@
 					<h3>The Wedding of</h3>
 					<h1>Than Kywal Nyein</h1>
 					<h2>&</h2>
-					<h1>Nandar Hlaing</h1>
+					<h1 class="mb-5">Nandar Hlaing</h1>
+					<a href="#section">
+						<i class="bi bi-arrow-down-circle text-pink fs-40" id="scroll"></i>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="bg-3 pt-5">
-		<div class="container mb-5 px-4">
-			<div class="row">
-				<div class="col-12 text-center rounded p-4 shadow">
-					<span class="dance-med">
-			            Save the Date
-			        </span>
-			        <div class="py-2">
-			        	<i class="date bi bi-calendar-heart fs-40"></i>
-			        	<br class="my-3">
-			        	<u>Saturday, November 25, 2023</u>
-			        	<br class="my-3">
-			        </div>
-			        <hr class="mb-4">
-			        <span class="dance-med">
-			            Venue
-			        </span>
-			        <div class="py-2">
-			        	<i class="location bi bi-map-fill fs-40"></i>
-			        	<br class="my-3">
-			        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
-			        	<br class="my-3">
-			        </div>
+	<section class="bg-3" id="section1">
+		<div class="blur py-4">
+			<div class="container mb-5 px-4">
+				<div class="row">
+					<div class="col-12 text-center rounded p-4 shadow">
+						<span class="dance-med">
+				            Save the Date
+				        </span>
+				        <div class="py-2">
+				        	<i class="date bi bi-calendar-heart fs-40"></i>
+				        	<br class="my-3">
+				        	<u>Saturday, November 25, 2023</u>
+				        	<br class="my-3">
+				        </div>
+				        <hr class="mb-4">
+				        <span class="dance-med">
+				            Venue
+				        </span>
+				        <div class="py-2">
+				        	<i class="location bi bi-map-fill fs-40"></i>
+				        	<br class="my-3">
+				        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
+				        	<br class="my-3">
+				        </div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container my-5 px-4">
-			<div class="row">
-				<div class="col-12 text-center rounded p-3 shadow">
-		        	<p class="dance-med">
-			            Dinner Reservation
-			        </p>
-			        <form class="text-start" action="/rsvp" method="POST">
-			        	<div class="mb-3">
-			        		<label for="name">Name</label>
-			        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
-			        	</div>
-			        	<div class="mb-3">
-			        		<label for="phone">Phone</label>
-			        		<input type="text" name="phone" class="form-control border-none bg-transparent" id="phone">
-			        	</div>
-			        	<div class="mb-3">
-			        		<label for="attendance">Attendance Confirmation</label>
-				        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="attendance">
-				        		<option value="0">Accept with pleasure! &#128513;</option>
-				        		<option value="1">Decline with regret. &#128532;</option>
-				        	</select>
-			        	</div>
-			        	<div class="mb-3">
-			        		<label for="extra">Number of Guests</label>
-				        	<div class="form-check mt-2">
-								<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1">
-								<label class="form-check-label" for="extra1">
-									Only me.
-								</label>
+			<div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 text-center rounded p-3 shadow">
+			        	<p class="dance-med">
+				            Dinner Reservation
+				        </p>
+				        <form class="text-start" action="/rsvp" method="POST">
+				        	<div class="mb-3">
+				        		<label for="name">Name</label>
+				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
+				        	</div>
+				        	<div class="mb-3">
+				        		<label for="phone">Phone</label>
+				        		<input type="number" name="phone" class="form-control border-none bg-transparent" id="phone">
+				        	</div>
+				        	<div class="mb-3">
+				        		<label for="attendance">Attendance Confirmation</label>
+					        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="attendance">
+					        		<option value="0">Accept with pleasure! &#128513;</option>
+					        		<option value="1">Decline with regret. &#128532;</option>
+					        	</select>
+				        	</div>
+				        	<div class="mb-3">
+				        		<label for="extra">Number of Guests</label>
+					        	<div class="form-check mt-2">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1">
+									<label class="form-check-label" for="extra1">
+										Only me.
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra2">
+									<label class="form-check-label" for="extra2">
+										+1
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra3">
+									<label class="form-check-label" for="extra3">
+										+2
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra4">
+									<label class="form-check-label" for="extra4">
+										+3
+									</label>
+								</div>
+				        	</div>
+				        	<div class="mb-3 text-center">
+								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark btn-round px-4 py-2">
 							</div>
-							<div class="form-check">
-								<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra2">
-								<label class="form-check-label" for="extra2">
-									+1
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra3">
-								<label class="form-check-label" for="extra3">
-									+2
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra4">
-								<label class="form-check-label" for="extra4">
-									+3
-								</label>
-							</div>
-			        	</div>
-			        	<div class="mb-3 text-center">
-							<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark btn-round px-4 py-2">
-						</div>
-			        </form>
+				        </form>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container my-5 px-4">
-			<div class="row">
-				<div class="col-12 rounded p-3 shadow">
-					<p class="dance-med">
-			            Vanue Location
-			        </p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.605159497678!2d96.15261697605625!3d16.845932783951874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1936055d915d1%3A0xc2e694079328f916!2sJeff&#39;s%20Kitchen%20Thai%20%26%20European%20(KanYeikThar%20Branch)!5e0!3m2!1sen!2smm!4v1695270608826!5m2!1sen!2smm "allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100" height="300px"></iframe>
+			<div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 rounded p-3 shadow">
+						<p class="dance-med">
+				            Vanue Location
+				        </p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.605159497678!2d96.15261697605625!3d16.845932783951874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1936055d915d1%3A0xc2e694079328f916!2sJeff&#39;s%20Kitchen%20Thai%20%26%20European%20(KanYeikThar%20Branch)!5e0!3m2!1sen!2smm!4v1695270608826!5m2!1sen!2smm "allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100" height="300px"></iframe>
+					</div>
 				</div>
 			</div>
+			<div class="container my-5 px-3">
+				<div id="time" class="shadow rounded text-center"></div>
+			</div>
+			<p class="footer mb-0">
+				Can't wait to celebrate auspicious moment of our family with you!
+			</p>
 		</div>
-		<div class="container my-5 px-3">
-			<div id="time" class="shadow rounded text-center"></div>
-		</div>
-		<p class="footer">
-			Can't wait to celebrate auspicious moment of our family with you!
-		</p>
-	</div>
+	</section>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>

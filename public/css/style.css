@@ -359,7 +359,11 @@ body {
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
-	backdrop-filter: blur(3px);
+}
+
+.blur{
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(5px);
 }
 
 img {
@@ -444,7 +448,7 @@ img {
 }
 
 .h-cus{
-	height: 750px;
+	height: 45vh;
 }
 
 .mt-3{
@@ -468,7 +472,7 @@ img {
 }
 
 .title {
-	padding-top: 400px;
+	padding-top: 45vh;
 }
 
 .date {
@@ -563,4 +567,19 @@ img {
 	text-align: center;
 	font-size: 16px;
 	margin: 24px;
+}
+
+.text-pink{
+	color: #db538a;
+/*	border-color: #db538a;*/
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

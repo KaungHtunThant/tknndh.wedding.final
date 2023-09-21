@@ -85,6 +85,11 @@ var styles2 = [
     , 'font-size: 32px'
 ].join(';');
 
+$("#scroll").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#section1").offset().top},
+        'slow');
+});
 // console.log('\n\n%c SAVE THE DATE: 29th Nov, 2020!', styles);
 
 // console.log('%cYour presence is requested!%c\n\nRegards: Vinit Shahdeo', styles1, styles2);
