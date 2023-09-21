@@ -446,6 +446,7 @@ img {
 .bg-img{
 	width: 100%;
 /*	height: 650px;*/
+	min-height: 100vh;
 	background-image: url('/assets/img/bg-2.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
