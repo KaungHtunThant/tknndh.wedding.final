@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return redirect('/final');
 });
 
-Route::get('/final', function () {
-    return view('index_final');
-});
+Route::get('/final', [MainController::class, 'index']);

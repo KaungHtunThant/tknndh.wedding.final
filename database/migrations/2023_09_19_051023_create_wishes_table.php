@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('wishes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('r_id');
+            $table->string('name');
             $table->string('descriptions');
-            $table->foreign('r_id')->references('id')->on('rsvp_lists');
             $table->timestamps();
         });
     }
