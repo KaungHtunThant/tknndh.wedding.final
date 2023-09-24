@@ -28,5 +28,6 @@ class WishController extends Controller
 
         // SESSION::
         return redirect('/');
+        // return $response;
     }
 }

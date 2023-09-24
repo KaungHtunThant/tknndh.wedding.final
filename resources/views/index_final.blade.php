@@ -156,16 +156,12 @@
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="phone">Wish</label>
-				        		<textarea type="number" name="phone" class="form-control border-none bg-transparent" id="description"></textarea>
+				        		<textarea type="number" name="descriptions" class="form-control border-none bg-transparent" id="descriptions"></textarea>
 				        	</div>
 				        	<div class="mb-3 text-center">
 								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
 							</div>
 				        </form>
-				        <p class="dance-med">Wishes</p>
-				        <div class="">
-				        	
-				        </div>
 					</div>
 				</div>
 			</div>

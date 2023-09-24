@@ -10,7 +10,7 @@ class Wishes extends Model
     use HasFactory;
 
     protected $fillable = [
-        'r_id',
+        'name',
         'descriptions',
     ];
 }
