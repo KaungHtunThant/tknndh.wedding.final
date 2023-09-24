@@ -28,47 +28,31 @@
 
 	<title>Wedding Invitation | Than Kywal Nyein, Nandar Hlaing</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap'>
+	{{-- <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> --}}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Marck+Script&family=Parisienne&family=Petit+Formal+Script&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="{{ url('css/style.css') }}">
 	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-	<div class="sakura-falling"></div>
-	<img src="{{ url('assets/img/rf.png') }}" alt="image-top-right" class="top-right-decoration">
-	<img src="{{ url('assets/img/lf.png') }}" alt="image-top-left" class="top-left-decoration"> 
-	<div class="bg-img h-cus">
-		<div class="bg-filter">
-			<section id="media"></section>
-			<div class="container text-center" class="h-cus">
-				<div class="title">
-					<h3>The Wedding of</h3>
-					<h1>Than Kywal Nyein</h1>
-					<h2>&</h2>
-					<h1 class="mb-5">Nandar Hlaing</h1>
-					<a href="#section">
-						<i class="bi bi-arrow-down-circle text-pink fs-40" id="scroll"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	<section class="bg-3" id="section1">
-		<div class="blur py-4">
+		<div class="py-4">
 			<div class="container mb-5 px-4">
 				<div class="row">
-					<div class="col-12 text-center rounded p-4 shadow">
+					<div class="col-12 text-center rounded pt-4 shadow">
 						<span class="dance-med">
 				            Save the Date
 				        </span>
-				        <div class="py-2">
+				        <div class="py-2 mb-4">
 				        	<i class="date bi bi-calendar-heart fs-40"></i>
-				        	<br class="my-3">
-				        	<u>Saturday, November 25, 2023</u>
+				        	<br>
+				        	Saturday, November 25, 2023
+				        	<br>
+				        	6:00PM - 8:00PM
 				        	<br class="my-3">
 				        </div>
-				        <hr class="mb-4">
 				        <div id="location">
 				        	<span class="dance-med">
 					            Venue
@@ -76,7 +60,7 @@
 					        <div class="py-2">
 					        	<i class="location bi bi-map-fill fs-40"></i>
 					        	<br class="my-3">
-					        	<u>Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon</u>
+					        	Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon
 					        	<br class="my-3">
 					        </div>
 				        </div>
@@ -90,6 +74,7 @@
 				            Dinner Reservation
 				        </p>
 				        <form class="text-start" action="/rsvp" method="POST">
+				        	@csrf
 				        	<div class="mb-3">
 				        		<label for="name">Name</label>
 				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
@@ -100,15 +85,15 @@
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="attendance">Attendance Confirmation</label>
-					        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="attendance">
-					        		<option value="0">Accept with pleasure!  &#128513;</option>
-					        		<option value="1">Decline with regret.  &#128532;</option>
+					        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="status">
+					        		<option value="0">Accept with pleasure!</option>
+					        		<option value="1">Decline with regret.</option>
 					        	</select>
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="extra">Number of Guests</label>
 					        	<div class="form-check mt-2">
-									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1" value="1">
+									<input class="form-check-input bg-transparent" type="radio" name="extra" id="extra1" value="1" checked>
 									<label class="form-check-label" for="extra1">
 										Only me.
 									</label>
@@ -139,6 +124,14 @@
 					</div>
 				</div>
 			</div>
+			<div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 text-center rounded p-3 shadow">
+						<div id="time"></div>
+					</div>
+				</div>
+			</div>
+			
 			<div class="container my-5 px-4" id="tar_location">
 				<div class="row">
 					<div class="col-12 rounded p-3 shadow">
@@ -149,12 +142,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="container my-5 px-3">
-				<div id="time" class="shadow rounded text-center"></div>
+			<div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 text-center rounded p-3 shadow">
+			        	<p class="dance-med">
+				            Wedding Wish
+				        </p>
+				        <form class="text-start" action="/wish" method="POST">
+				        	@csrf
+				        	<div class="mb-3">
+				        		<label for="name">Name</label>
+				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
+				        	</div>
+				        	<div class="mb-3">
+				        		<label for="phone">Wish</label>
+				        		<textarea type="number" name="phone" class="form-control border-none bg-transparent" id="description"></textarea>
+				        	</div>
+				        	<div class="mb-3 text-center">
+								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
+							</div>
+				        </form>
+				        <p class="dance-med">Wishes</p>
+				        <div class="">
+				        	
+				        </div>
+					</div>
+				</div>
 			</div>
-			<p class="footer mb-0">
-				Can't wait to celebrate auspicious moment of our family with you!
-			</p>
+			{{-- <div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 text-center rounded p-3 shadow">
+						
+					</div>
+				</div>
+			</div> --}}
 		</div>
 	</section>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

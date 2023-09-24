@@ -356,14 +356,19 @@ body {
 
 .bg-3{
 	background-image: url('/assets/img/bg-3.jpg');
-	background-position: right;
+	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+.col-12{
+	background: rgba(255, 255, 255, 0.4);
+}
+
 .blur{
 	background: rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(5px);
+/*	backdrop-filter: blur(5px);*/
+
 }
 
 img {
@@ -391,10 +396,8 @@ img {
 	display: block;
 }
 
-
-
 .title h1 {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Parisienne', cursive;
 	font-weight: bold;
 	font-style: normal;
 	font-size: 45px;
@@ -404,7 +407,7 @@ img {
 }
 
 .title h2 {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Parisienne', cursive;
 	font-weight: bold;
 	font-style: normal;
 	margin: 0;
@@ -415,13 +418,14 @@ img {
 }
 
 .dance-med {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Parisienne', cursive;
 	font-weight: bolder;
 	font-style: normal;
 	font-size: 27px;
-	color: #000;
+	color: #c267ab;
 	margin-top: 16px;
 	text-align: center;
+	-webkit-text-stroke: 0.4px #751a46;
 }
 
 .title h3 {
@@ -488,7 +492,7 @@ img {
 }
 
 .rounded{
-	border: 2px #333 solid!important;
+	border: 2px #db538a solid!important;
 	border-radius: 20px!important;
 }
 
@@ -544,24 +548,6 @@ img {
 	background: linear-gradient(330deg, #F9CEEE, #fcb8d4);
 }
 
-.block {
-	width: 100%;
-	height: 160px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: #000;
-/*	padding: 10px;*/
-}
-
-.con {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	border-radius: 10px;
-	overflow: hidden;
-}
-
 .footer {
 	color: #564861;
 	text-align: center;
@@ -593,3 +579,18 @@ select option{
 	border-color: #db538a;
 }
 
+.bh{
+	width: 100%;
+	height: 120px;
+	width: ;
+	border-radius: 10px;
+	border: 4px #db538a solid;
+	background: rgba(249, 206, 238, 0.7);
+	color: #db538a;
+}
+
+.bh h1{
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 70px;
+/*	font-weight: 30px;*/
+}

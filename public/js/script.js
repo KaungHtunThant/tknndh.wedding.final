@@ -39,12 +39,14 @@ var x = setInterval(function() {
     
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var day1 = days/10;
+    var day2 = days%10;
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("time").innerHTML = "<div class='con'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div><br>Until our wedding day!";
+    document.getElementById("time").innerHTML = '<div class="container p-4 text-center"><p class="dance-med">Only</p><div class="row"><div class="col-6 p-2"><div class="position-relative bh"><h1 class="position-absolute top-50 start-50 translate-middle">'+ ~~day1 +'</h1></div></div><div class="col-6 p-2"><div class="position-relative bh"><h1 class="position-absolute top-50 start-50 translate-middle">'+ day2 +'</h1></div></div><p class="text-pink dance-med">Days left before our wedding day!</p></div>';
     
     // If the count down is over, write some text 
     if (distance < 0) {
