@@ -41,15 +41,15 @@
 	<img src="{{ url('assets/img/rf.png') }}" alt="image-top-right" class="top-right-decoration">
 	<img src="{{ url('assets/img/lf.png') }}" alt="image-top-left" class="top-left-decoration"> 
 	<div class="bg-img h-cus">
-		<div class="bg-filter">
+		<div class="bg-filter h-100 w-100">
 			<section id="media"></section>
 			<div class="container text-center" class="h-cus">
 				<div class="title">
-					<h3>The Wedding of</h3>
+					<h3>The Wedding Dinner of</h3>
 					<h1>Than Kywal Nyein</h1>
 					<h2>&</h2>
 					<h1 class="mb-5">Nandar Hlaing</h1>
-					<a href="/home" class="btn btn-outline-dark border-pink rounded text-light">
+					<a href="/home" class="btn btn-outline-dark border-pink rounded text-light bg-filter">
 						Open Invitation
 					</a>
 				</div>

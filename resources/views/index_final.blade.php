@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<meta charset="UTF-8">
-	{{-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> --}}
 	{{-- <meta name="description"
 	content="With the divine grace of the almighty, inviting you and your family to Sonali's wedding to be held on 29th November at Ashirwad Garden, Ratu, Ranchi from 7:00 PM onwards."> --}}
 	<!-- <meta name="author" content="Vinit Shahdeo">
@@ -39,6 +38,46 @@
 <body>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
+			<div class="container mb-5 px-2">
+				<div class="row">
+					<div class="col-12">
+						<div id="slider1" class="carousel carousel-fade slide slide-round shadow" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="{{ url('assets/img/slides/1.jpg') }}" class="d-block w-100" alt="Image 1">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/2.jpg') }}" class="d-block w-100" alt="Image 2">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/3.jpg') }}" class="d-block w-100" alt="Image 3">
+								</div>
+								<div class="carousel-item active">
+									<img src="{{ url('assets/img/slides/4.jpg') }}" class="d-block w-100" alt="Image 4">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/5.jpg') }}" class="d-block w-100" alt="Image 5">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/6.jpg') }}" class="d-block w-100" alt="Image 6">
+								</div>
+								<div class="carousel-item active">
+									<img src="{{ url('assets/img/slides/7.jpg') }}" class="d-block w-100" alt="Image 7">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/8.jpg') }}" class="d-block w-100" alt="Image 8">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/9.jpg') }}" class="d-block w-100" alt="Image 9">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/10.jpg') }}" class="d-block w-100" alt="Image 10">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="container mb-5 px-4">
 				<div class="row">
 					<div class="col-12 text-center rounded pt-4 shadow">
@@ -50,10 +89,10 @@
 				        	<br>
 				        	Saturday, November 25, 2023
 				        	<br>
-				        	6:00PM - 8:00PM
+				        	6:00PM - 8:30PM
 				        	<br class="my-3">
 				        </div>
-				        <div id="location">
+				        <div>
 				        	<span class="dance-med">
 					            Venue
 					        </span>
@@ -118,7 +157,7 @@
 								</div>
 				        	</div>
 				        	<div class="mb-3 text-center">
-								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
+								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink rounded text-light bg-filter px-4 py-2">
 							</div>
 				        </form>
 					</div>
