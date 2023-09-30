@@ -38,40 +38,52 @@
 <body>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
-			<div class="container mb-5 px-2">
-				<div class="row">
-					<div class="col-12">
-						<div id="slider1" class="carousel carousel-fade slide slide-round shadow" data-bs-ride="carousel">
+			<div class="container mt-4 mb-5">
+				<div class="row px-2">
+					<div class="col-12 shadow px-0">
+						<div id="slider1" class="carousel carousel-fade slide slide-round" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="6" aria-label="Slide 7"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="7" aria-label="Slide 8"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="8" aria-label="Slide 9"></button>
+								<button type="button" data-bs-target="#slider1" data-bs-slide-to="9" aria-label="Slide 10"></button>
+							</div>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="{{ url('assets/img/slides/1.jpg') }}" class="d-block w-100" alt="Image 1">
+									<img src="{{ url('assets/img/slides/1.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 1">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/2.jpg') }}" class="d-block w-100" alt="Image 2">
+									<img src="{{ url('assets/img/slides/2.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 2">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/3.jpg') }}" class="d-block w-100" alt="Image 3">
-								</div>
-								<div class="carousel-item active">
-									<img src="{{ url('assets/img/slides/4.jpg') }}" class="d-block w-100" alt="Image 4">
+									<img src="{{ url('assets/img/slides/3.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 3">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/5.jpg') }}" class="d-block w-100" alt="Image 5">
+									<img src="{{ url('assets/img/slides/4.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 4">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/6.jpg') }}" class="d-block w-100" alt="Image 6">
-								</div>
-								<div class="carousel-item active">
-									<img src="{{ url('assets/img/slides/7.jpg') }}" class="d-block w-100" alt="Image 7">
+									<img src="{{ url('assets/img/slides/5.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 5">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/8.jpg') }}" class="d-block w-100" alt="Image 8">
+									<img src="{{ url('assets/img/slides/6.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 6">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/9.jpg') }}" class="d-block w-100" alt="Image 9">
+									<img src="{{ url('assets/img/slides/7.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 7">
 								</div>
 								<div class="carousel-item">
-									<img src="{{ url('assets/img/slides/10.jpg') }}" class="d-block w-100" alt="Image 10">
+									<img src="{{ url('assets/img/slides/8.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 8">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/9.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 9">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ url('assets/img/slides/10.jpg') }}" class="d-block w-100 shadow-lg" alt="Image 10">
 								</div>
 							</div>
 						</div>
@@ -99,7 +111,7 @@
 					        <div class="py-2">
 					        	<i class="location bi bi-map-fill fs-40"></i>
 					        	<br class="my-3">
-					        	Jeff's Kitchen, Near Kan Yeik Thar Hotel, 4A KanYeikThar Street, Yangon
+					        	Jeff's Kitchen, Kan Yeik Thar Branch, 4A KanYeikThar Street, Yangon
 					        	<br class="my-3">
 					        </div>
 				        </div>
@@ -204,15 +216,9 @@
 					</div>
 				</div>
 			</div>
-			{{-- <div class="container my-5 px-4">
-				<div class="row">
-					<div class="col-12 text-center rounded p-3 shadow">
-						
-					</div>
-				</div>
-			</div> --}}
 		</div>
 	</section>
+	<audio src="./assets/mp3/song2.m4a" id="my_audio" loop="loop"></audio> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
