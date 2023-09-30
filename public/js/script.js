@@ -22,7 +22,7 @@
  */
 $(document).on('click', function(){
     document.getElementById("my_audio").play();
-    // console.log('Shaadi me zaroor aana');
+    console.log('play');
 });
 
 // Set the date we're counting down to
