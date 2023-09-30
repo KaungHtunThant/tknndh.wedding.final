@@ -45,7 +45,7 @@
 			<section id="media"></section>
 			<div class="container text-center" class="h-cus">
 				<div class="title">
-					<h3>The Wedding Dinner of</h3>
+					<h3><nobr>Wedding Dinner</nobr><br>of</h3>
 					<h1>Than Kywal Nyein</h1>
 					<h2>&</h2>
 					<h1 class="mb-5">Nandar Hlaing</h1>

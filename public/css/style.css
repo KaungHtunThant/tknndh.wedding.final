@@ -435,8 +435,9 @@ img {
 }
 
 .title h3 {
+/*	font-family: Arial, Helvetica, Sans-serif;*/
 	font-weight: 300;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 	letter-spacing: 5px;
 	font-size: 18px;
 	color: #ddd;

@@ -41,7 +41,7 @@
 			<div class="container mt-4 mb-5">
 				<div class="row px-2">
 					<div class="col-12 shadow px-0">
-						<div id="slider1" class="carousel carousel-fade slide slide-round" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
+						<div id="slider1" class="carousel carousel-fade slide slide-round" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="3000">
 							<div class="carousel-indicators">
 								<button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 								<button type="button" data-bs-target="#slider1" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -111,7 +111,7 @@
 					        <div class="py-2">
 					        	<i class="location bi bi-map-fill fs-40"></i>
 					        	<br class="my-3">
-					        	Jeff's Kitchen, Kan Yeik Thar Branch, 4A KanYeikThar Street, Yangon
+					        	Jeff's Kitchen - Kan Yeik Thar Branch <br>4A KanYeikThar Street, Yangon
 					        	<br class="my-3">
 					        </div>
 				        </div>
@@ -169,7 +169,7 @@
 								</div>
 				        	</div>
 				        	<div class="mb-3 text-center">
-								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink rounded text-light bg-filter px-4 py-2">
+								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
 							</div>
 				        </form>
 					</div>
@@ -216,6 +216,10 @@
 					</div>
 				</div>
 			</div>
+			<p class="footer text-pink">
+	            Can't wait to celebrate auspicious moment with you!
+	            <span></span>
+	         </p>
 		</div>
 	</section>
 	<audio src="./assets/mp3/song2.m4a" id="my_audio" loop="loop"></audio> 
