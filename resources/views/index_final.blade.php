@@ -36,6 +36,9 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
+	<div class="">
+		<div class="position-absolute top-50 end-0 translate-middle-y"></div>
+	</div>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
 			<div class="container mt-4 mb-5">
@@ -222,7 +225,7 @@
 	         </p>
 		</div>
 	</section>
-	<embed src="{{ url('assets/mp3/song2.m4a') }}" loop="true" autostart="true" width="2" height="0" id="my_audio">
+	<audio src="{{ url('assets/mp3/song2.m4a') }}" id="my_audio" loop="loop"></audio> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
