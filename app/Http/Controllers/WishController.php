@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Wishes;
+use Illuminate\Support\Facades\Session;
 
 class WishController extends Controller
 {
@@ -26,8 +27,8 @@ class WishController extends Controller
 
         $response = Wishes::create($request->all());
 
-        // SESSION::
-        return redirect('/');
+        Session::put('wish', 'true');
+        return redirect('/home');
         // return $response;
     }
 }

@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RsvpLists;
+use App\Models\Wishes;
+use Illuminate\Support\Facades\Session;
 
 class RSVPController extends Controller
 {
     public function index(Request $request)
     {
         $rsvp = RsvpLists::all();
+        $wish = Wishes::all();
 
         return view('admin.index')
-            ->with('rsvp', $rsvp);
+            ->with('rsvp', $rsvp)
+            ->with('wish', $wish);
     }
 
     public function store(Request $request)
@@ -26,7 +30,7 @@ class RSVPController extends Controller
 
         $response = RsvpLists::create($request->all());
 
-        // SESSION::
-        return redirect('/');
+        Session::put('rsvp', 'true');
+        return redirect('/home');
     }
 }

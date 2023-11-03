@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>TK & NDH Wedding - Home</title>
 	<meta charset="UTF-8">
-	{{-- <meta name="description"
-	content="With the divine grace of the almighty, inviting you and your family to Sonali's wedding to be held on 29th November at Ashirwad Garden, Ratu, Ranchi from 7:00 PM onwards."> --}}
+	<!-- <meta name="description"
+	content="With the divine grace of the almighty, inviting you and your family to Sonali's wedding to be held on 29th November at Ashirwad Garden, Ratu, Ranchi from 7:00 PM onwards."> -->
 	<!-- <meta name="author" content="Vinit Shahdeo">
 	<meta name="email" content="vinitshahdeo.com">
 	<meta name="copyright" content="Vinit Shahdeo 2020" />
@@ -36,6 +36,18 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
+	@if(Session::has('rsvp'))
+		{{ Session::forget('rsvp'); }}
+	    <script type="text/javascript">
+	        alert('Thank you. We appreciate your response.');
+	    </script>
+    @endif
+    @if(Session::has('wish'))
+		{{ Session::forget('wish'); }}
+	    <script type="text/javascript">
+	        alert('Thank you! We\'ve recieved your wishes!');
+	    </script>
+    @endif
 	<div class="">
 		<div class="position-absolute top-50 end-0 translate-middle-y"></div>
 	</div>
@@ -210,7 +222,7 @@
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="phone">Wish</label>
-				        		<textarea type="number" name="descriptions" class="form-control border-none bg-transparent" id="descriptions"></textarea>
+				        		<textarea name="descriptions" class="form-control border-none bg-transparent" id="descriptions"></textarea>
 				        	</div>
 				        	<div class="mb-3 text-center">
 								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
@@ -222,7 +234,7 @@
 			<p class="footer text-pink">
 	            Can't wait to celebrate auspicious moment with you!
 	            <span></span>
-	         </p>
+	        </p>
 		</div>
 	</section>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
