@@ -49,7 +49,7 @@
 	    </script>
     @endif
 	<div class="">
-		<div class="position-absolute top-50 end-0 translate-middle-y"></div>
+		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><a class="bi bi-play-circle fs-40 text-pink" id="play"></a></div>
 	</div>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
@@ -212,7 +212,7 @@
 				<div class="row">
 					<div class="col-12 text-center rounded p-3 shadow">
 			        	<p class="dance-med">
-				            Wedding Wish
+				            Wish Conner
 				        </p>
 				        <form class="text-start" action="/wish" method="POST">
 				        	@csrf
@@ -222,7 +222,7 @@
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="phone">Wish</label>
-				        		<textarea name="descriptions" class="form-control border-none bg-transparent" id="descriptions"></textarea>
+				        		<textarea name="descriptions" class="form-control border-none bg-transparent" id="descriptions" maxlength="250"></textarea>
 				        	</div>
 				        	<div class="mb-3 text-center">
 								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">
@@ -231,16 +231,33 @@
 					</div>
 				</div>
 			</div>
+			<div class="container my-5 px-4">
+				<div class="row">
+					<div class="col-12 rounded p-3 shadow">
+						<p class="dance-med">
+				            Wedding Wishes
+				        </p>
+				        <div class="box p-2">
+				        	@foreach($wishes as $wish)
+				        	<p><b><i class="bi bi-person p-1 me-1 rounded"></i> {{ $wish->name }}</b></p>
+				        	<p class="px-2">{{ $wish->descriptions }}</p>
+				        	<hr>
+				        	@endforeach
+				        </div>
+				    </div>
+				</div>
+			</div>
 			<p class="footer text-pink">
 	            Can't wait to celebrate auspicious moment with you!
 	            <span></span>
 	        </p>
 		</div>
 	</section>
+	<audio src="{{ url('assets/mp3/song2.m4a') }}" id="my_audio" loop="loop"></audio>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
 	<script  src="{{ url('js/script.js') }}"></script>
-	<audio src="{{ url('assets/mp3/song2.m4a') }}" id="my_audio" loop="loop"></audio>
 </body>
 </html>
