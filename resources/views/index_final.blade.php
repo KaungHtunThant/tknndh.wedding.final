@@ -49,7 +49,7 @@
 	    </script>
     @endif
 	<div class="">
-		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><a class="bi bi-play-circle fs-40 text-pink" id="play"></a></div>
+		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><a class="bi bi-play-circle fs-60 text-pink" id="play"></a></div>
 	</div>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
