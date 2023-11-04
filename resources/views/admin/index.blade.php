@@ -9,24 +9,33 @@
 <body>
 	<div class="container">
 		<h3 class="text-center">RSVP List</h3>
-		<table class="table table-sm table-light table-responsive">
-			<tr>
-				<td colspan="4">Total incoming</td>
-				<td>{{ $total }}</td>
-			</tr>
-			<tr>
-				<th>#</th>
-				<th>Name</th>
-				<th>Phone</th>
-				<th>Status</th>
-				<th>total</th>
-			</tr>
+		{{ $rsvp->links('pagination::bootstrap-5') }}
+		<table class="table table-sm table-light table-responsive table-striped">
+			<thead>
+				<tr>
+					<td colspan="4">Total incoming</td>
+					<td>{{ $total }}</td>
+				</tr>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Status</th>
+					<th>total</th>
+				</tr>
+			</thead>
 			@foreach($rsvp as $r)
 			<tr>
-				<td>{{ ($loop->index + 1) }}</td>
+				<td>{{ ($loop->index + 1) + (($page-1) * 10) }}</td>
 				<td>{{ $r->name }}</td>
 				<td>{{ $r->phone }}</td>
-				<td>{{ $r->status }}</td>
+				<td>
+					@if($r->status == 1)
+						<div class="bg-success text-light text-center">Accepted</div>
+					@else
+						<div class="bg-warning text-light text-center">Declined</div>
+					@endif
+				</td>
 				<td>
 					@if($r->extra == 1)
 						1
@@ -39,6 +48,8 @@
 			</tr>
 			@endforeach
 		</table>
+		<p>Page - {{ $page }}</p>
+		{{ $rsvp->links('pagination::bootstrap-5') }}
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

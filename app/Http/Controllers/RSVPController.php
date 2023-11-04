@@ -10,12 +10,17 @@ class RSVPController extends Controller
 {
     public function index(Request $request)
     {
-        $rsvp = RsvpLists::all();
+        $page = 1;
+        if (isset($request->page)) {
+            $page = $request->page;
+        }
+        $rsvp = RsvpLists::orderby('id', 'DESC')->paginate(10);
         $total = RsvpLists::sum('extra');
 
         return view('admin.index')
             ->with('rsvp', $rsvp)
-            ->with('total', $total);
+            ->with('total', $total)
+            ->with('page', $page);
     }
 
     public function store(Request $request)

@@ -22,13 +22,11 @@ Route::get('/', function () {
 
 Route::get('/home', [MainController::class, 'index']);
 
-// Route::get('/final', [MainController::class, 'index']);
-
 Route::post('/rsvp', [RSVPController::class, 'store']);
 
 Route::post('/wish', [WishController::class, 'store']);
 
-Route::get('/admin', [RSVPController::class, 'index']);
+Route::get('/admin/stays/here', [RSVPController::class, 'index']);
 
 Route::get('/test', function () {
     return view('test');
