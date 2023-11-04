@@ -28,7 +28,9 @@
 				<td>{{ $r->phone }}</td>
 				<td>{{ $r->status }}</td>
 				<td>
-					@if($r->extra > 0)
+					@if($r->extra == 1)
+						1
+					@elseif($r->extra > 0)
 						+{{ $r->extra-1 }}
 					@else
 						0
