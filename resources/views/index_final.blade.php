@@ -49,7 +49,7 @@
 	    </script>
     @endif
 	<div class="">
-		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><a class="bi bi-play-circle fs-60 text-pink" id="play"></a></div>
+		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><i class="bi bi-play-circle fs-60 text-pink" id="play"></i></div>
 	</div>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
@@ -143,11 +143,11 @@
 				        	@csrf
 				        	<div class="mb-3">
 				        		<label for="name">Name</label>
-				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
+				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name" required>
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="phone">Phone</label>
-				        		<input type="number" name="phone" class="form-control border-none bg-transparent" id="phone">
+				        		<input type="number" name="phone" class="form-control border-none bg-transparent" id="phone" required>
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="attendance">Attendance Confirmation</label>
@@ -218,11 +218,11 @@
 				        	@csrf
 				        	<div class="mb-3">
 				        		<label for="name">Name</label>
-				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name">
+				        		<input type="text" name="name" class="form-control border-none bg-transparent" id="name" required>
 				        	</div>
 				        	<div class="mb-3">
 				        		<label for="phone">Wish</label>
-				        		<textarea name="descriptions" class="form-control border-none bg-transparent" id="descriptions" maxlength="250"></textarea>
+				        		<textarea name="descriptions" class="form-control border-none bg-transparent" id="descriptions" maxlength="250" required></textarea>
 				        	</div>
 				        	<div class="mb-3 text-center">
 								<input type="submit" name="submit" value="Submit" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2">

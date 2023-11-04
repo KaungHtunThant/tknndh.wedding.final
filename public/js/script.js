@@ -21,6 +21,17 @@
  *
  */
 var play = false;
+var init = true;
+
+$(document).on('click', function(){
+    if (init == true) {
+        document.getElementById("my_audio").play();
+        console.log('play');
+        init = false;
+        play = true;
+    }
+});
+
 $("#play").on('click', function(){
     if (play == false) {
         document.getElementById("my_audio").play();
