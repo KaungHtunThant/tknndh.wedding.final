@@ -126,7 +126,7 @@
 					        <div class="py-2">
 					        	<i class="location bi bi-map-fill fs-40"></i>
 					        	<br class="my-3">
-					        	Jeff's Kitchen - Kan Yeik Thar Branch <br>4A KanYeikThar Street, Yangon
+					        	<a href="https://www.google.com/maps/place/Jeff's+Kitchen+Thai+%26+European+(KanYeikThar+Branch)/@16.845933,96.155192,16z/data=!4m6!3m5!1s0x30c1936055d915d1:0xc2e694079328f916!8m2!3d16.8459328!4d96.1551919!16s%2Fg%2F11cn175h2z?hl=en&entry=ttu">Jeff's Kitchen - Kan Yeik Thar Branch <br>4A KanYeikThar Street, Yangon</a>
 					        	<br class="my-3">
 					        </div>
 				        </div>
@@ -152,8 +152,8 @@
 				        	<div class="mb-3">
 				        		<label for="attendance">Attendance Confirmation</label>
 					        	<select class="form-select mt-2 text-dark bg-transparent border-none" id="attendance" name="status">
-					        		<option value="0">Accept with pleasure!</option>
-					        		<option value="1">Decline with regret.</option>
+					        		<option value="1">Accept with pleasure!</option>
+					        		<option value="0">Decline with regret.</option>
 					        	</select>
 				        	</div>
 				        	<div class="mb-3">
@@ -248,7 +248,7 @@
 				</div>
 			</div>
 			<p class="footer text-pink">
-	            Can't wait to celebrate auspicious moment with you!
+	            Can't wait to celebrate the auspicious moment with you!
 	            <span></span>
 	        </p>
 		</div>

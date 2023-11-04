@@ -623,3 +623,8 @@ select option{
 #play:clicked{
 	color: black;
 }
+
+a{
+	text-decoration: none;
+	color: black;
+}
