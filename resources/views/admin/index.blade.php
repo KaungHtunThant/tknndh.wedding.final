@@ -10,44 +10,46 @@
 	<div class="container">
 		<h3 class="text-center">RSVP List</h3>
 		{{ $rsvp->links('pagination::bootstrap-5') }}
-		<table class="table table-sm table-light table-responsive table-striped">
-			<thead>
+		<div class="table-responsive">
+			<table class="table table-sm table-light table-striped">
+				<thead>
+					<tr>
+						<td colspan="4">Total incoming</td>
+						<td>{{ $total }}</td>
+					</tr>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Status</th>
+						<th>total</th>
+					</tr>
+				</thead>
+				@foreach($rsvp as $r)
 				<tr>
-					<td colspan="4">Total incoming</td>
-					<td>{{ $total }}</td>
+					<td>{{ ($loop->index + 1) + (($page-1) * 10) }}</td>
+					<td>{{ $r->name }}</td>
+					<td>{{ $r->phone }}</td>
+					<td>
+						@if($r->status == 1)
+							<div class="bg-success text-light text-center">Accepted</div>
+						@else
+							<div class="bg-warning text-light text-center">Declined</div>
+						@endif
+					</td>
+					<td>
+						@if($r->extra == 1)
+							1
+						@elseif($r->extra > 0)
+							+{{ $r->extra-1 }}
+						@else
+							0
+						@endif
+					</td>
 				</tr>
-				<tr>
-					<th>#</th>
-					<th>Name</th>
-					<th>Phone</th>
-					<th>Status</th>
-					<th>total</th>
-				</tr>
-			</thead>
-			@foreach($rsvp as $r)
-			<tr>
-				<td>{{ ($loop->index + 1) + (($page-1) * 10) }}</td>
-				<td>{{ $r->name }}</td>
-				<td>{{ $r->phone }}</td>
-				<td>
-					@if($r->status == 1)
-						<div class="bg-success text-light text-center">Accepted</div>
-					@else
-						<div class="bg-warning text-light text-center">Declined</div>
-					@endif
-				</td>
-				<td>
-					@if($r->extra == 1)
-						1
-					@elseif($r->extra > 0)
-						+{{ $r->extra-1 }}
-					@else
-						0
-					@endif
-				</td>
-			</tr>
-			@endforeach
-		</table>
+				@endforeach
+			</table>
+		</div>
 		<p>Page - {{ $page }}</p>
 		{{ $rsvp->links('pagination::bootstrap-5') }}
 	</div>
