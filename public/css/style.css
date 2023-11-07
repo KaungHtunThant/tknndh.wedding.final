@@ -365,6 +365,10 @@ body {
 	background: rgba(255, 255, 255, 0.4);
 }
 
+.bg-light-tp{
+	background: rgba(255, 255, 255, 0.9);
+}
+
 .blur{
 	background: rgba(255, 255, 255, 0.3);
 /*	backdrop-filter: blur(5px);*/

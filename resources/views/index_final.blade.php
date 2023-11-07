@@ -36,21 +36,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-	@if(Session::has('rsvp'))
-		{{ Session::forget('rsvp'); }}
-	    <script type="text/javascript">
-	        alert('Thank you. We appreciate your response.');
-	    </script>
-    @endif
-    @if(Session::has('wish'))
-		{{ Session::forget('wish'); }}
-	    <script type="text/javascript">
-	        alert('Thank you! We\'ve recieved your wishes!');
-	    </script>
-    @endif
-	<div class="">
-		<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><i class="bi bi-play-circle fs-60 text-pink" id="play"></i></div>
-	</div>
+	<div class="position-fixed bottom-0 end-0 pb-2 pe-3"><i class="bi bi-play-circle fs-60 text-pink" id="play"></i></div>
 	<section class="bg-3" id="section1">
 		<div class="py-4">
 			<div class="container mt-4 mb-5">
@@ -255,9 +241,62 @@
 	</section>
 	<audio src="{{ url('assets/mp3/song2.m4a') }}" id="my_audio" loop="loop"></audio>
 
+	<div class="modal fade" id="rsvp-modal" tabindex="-1" aria-labelledby="rsvp-modal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content bg-light-tp">
+				<div class="modal-header">
+					<h5 class="modal-title">RSVP Submitted.</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Thank you. We appreciate your response.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="wish-modal" tabindex="-1" aria-labelledby="wish-modal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content bg-light-tp">
+				<div class="modal-header blur2">
+					<h5 class="modal-title">Wish Posted.</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body blur2">
+					<p>Thank you! We've recieved your wishes!</p>
+				</div>
+				<div class="modal-footer blur2">
+					<button type="button" class="btn btn-outline-dark border-pink text-pink btn-round px-4 py-2" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-	<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+
+	@if(Session::has('rsvp'))
+	{{ Session::forget('rsvp'); }}
+    <script type="text/javascript">
+    	$(window).on('load', function() {
+	        $('#rsvp-modal').modal('show');
+	    });
+    </script>
+    @endif
+    @if(Session::has('wish'))
+	{{ Session::forget('wish'); }}
+	<script type="text/javascript">
+		$(window).on('load', function() {
+	        $('#wish-modal').modal('show');
+	    });
+    </script>
+    @endif
+
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> -->
+    <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
 	<script  src="{{ url('js/script.js') }}"></script>
 </body>
 </html>
